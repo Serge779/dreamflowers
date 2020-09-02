@@ -1690,9 +1690,12 @@ main .sel_product {
 }
 
 main .sel_product__image img {
+  width: 100%;
   max-width: 400px;
   max-height: 500px;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .sel_product__info {

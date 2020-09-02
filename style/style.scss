@@ -1056,9 +1056,11 @@ main {
 
         &__image {
             img {
+                width: 100%;
                 max-width: 400px;
                 max-height: 500px;
                 display: block;
+                object-fit: cover;
             }
         }
 
