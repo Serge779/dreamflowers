@@ -602,50 +602,12 @@ body {
 
 .header__top_right .currency {
   position: relative;
-  width: 52px;
-}
-
-.header__top_right .currency__title {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 17px 0;
-}
-
-.header__top_right .currency__title span {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.header__top_right .currency__title i {
-  margin-left: 5px;
-  font-size: 13px;
 }
 
 .header__top_right .currency__list {
-  position: absolute;
-  top: 100%;
-  left: -25px;
-  background: #fff;
-  padding: 10px 5px;
-  width: 75px;
-  -webkit-box-shadow: 0 1px 7px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 7px -2px rgba(0, 0, 0, 0.3);
-  -webkit-transform-origin: center top 0;
-          transform-origin: center top 0;
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  visibility: hidden;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__top_right .currency__item {
@@ -658,34 +620,20 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0px;
+  margin-right: 15px;
   cursor: pointer;
-}
-
-.header__top_right .currency__item .dot {
-  background: #aece89;
-  border-radius: 50px;
-  width: 6px;
-  height: 6px;
-  opacity: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 .header__top_right .currency__item:hover {
   color: #aece89;
 }
 
-.header__top_right .currency__item:hover .dot {
-  opacity: 1;
-  margin-right: 7px;
-}
-
 .header__top_right .currency__item .currency_item_value {
   margin-left: 5px;
 }
 
-.header__top_right .currency:hover .currency__title {
-  color: #aece89;
+.header__top_right .currency__item:last-child {
+  margin-right: 0;
 }
 
 .header__middle {
@@ -1716,6 +1664,17 @@ main .sel_product__item {
   color: #153d4d;
 }
 
+main .sel_product__item--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
 main .sel_product__name {
   display: block;
   width: 100px;
@@ -1749,11 +1708,38 @@ main .sel_product__description .plus div {
 main .sel_product__description .plus__two {
   -webkit-transform: rotate(90deg) translate(-2px, 0px);
           transform: rotate(90deg) translate(-2px, 0px);
+  opacity: 1;
+}
+
+main .sel_product__description .plus__two.active {
+  opacity: 0;
 }
 
 main .sel_product__description .plus.active .plus__two {
   -webkit-transform: rotate(0deg) translate(0px, -2px);
           transform: rotate(0deg) translate(0px, -2px);
+}
+
+main .sel_product__description-info {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  top: 250%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  line-height: 21px;
+}
+
+main .sel_product__description-info.active {
+  top: 200%;
+  opacity: 1;
+  visibility: visible;
 }
 
 main .cart_order {
@@ -1850,10 +1836,14 @@ main .cart_order .cart__list:last-child {
 
 main .cart_order .cart__image {
   width: 140px;
+  height: 140px;
 }
 
 main .cart_order .cart__image img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -1984,6 +1974,26 @@ main .cart_order .cart__btn:hover {
 
 .footer .footer_container__item a {
   color: #333333;
+}
+
+.footer .footer_container__item--messenger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer_container__whatsapp {
+  font-size: 20px;
+  color: #2BD348;
+}
+
+.footer .footer_container__viber {
+  font-size: 18px;
+  color: #80509C;
+  margin: 0 10px 0 5px;
 }
 
 .footer .footer_container__social {
@@ -2412,6 +2422,7 @@ main .cart_order .cart__btn:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
   }
   main .sel_product__image img {
     width: 100%;
