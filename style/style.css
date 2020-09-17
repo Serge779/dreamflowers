@@ -636,6 +636,10 @@ body {
   margin-right: 0;
 }
 
+.header__top_right .currency__item.active {
+  color: #aece89;
+}
+
 .header__middle {
   display: -webkit-box;
   display: -ms-flexbox;
