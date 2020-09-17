@@ -269,10 +269,10 @@ setTimeout(() => {
 // ------------ Currency Choose Start ---------
 
 const currency_item = document.querySelectorAll(".currency__item");
-const currency_list = document.querySelector(".currency__list");
-const currency_title = document.querySelector(".currency__title");
-const currency_title_value = document.querySelector(".currency_title_value");
-const currency_item_value = document.querySelectorAll(".currency_item_value");
+// const currency_list = document.querySelector(".currency__list");
+// const currency_title = document.querySelector(".currency__title");
+// const currency_title_value = document.querySelector(".currency_title_value");
+// const currency_item_value = document.querySelectorAll(".currency_item_value");
 
 // currency_item.forEach(element => {
 //     element.addEventListener("click", () => {
@@ -282,15 +282,20 @@ const currency_item_value = document.querySelectorAll(".currency_item_value");
 
 for (let i = 0; i < currency_item.length; i++) {
     currency_item[i].addEventListener("click", () => {
-        currency_title_value.innerText = currency_item_value[i].innerText
+        // currency_title_value.innerText = currency_item_value[i].innerText;
+
+        for (let j = 0; j < currency_item.length; j++) {
+            currency_item[j].classList.remove("active");
+        }
+        currency_item[i].classList.add("active");
     })
 }
 
-currency_item.forEach(e => {
-    e.addEventListener("click", () => {
-        currency_list.style.cssText = "transform: rotateX(90deg);visibility: hidden;"
-    })
-})
+// currency_item.forEach(e => {
+//     e.addEventListener("click", () => {
+//         currency_list.style.cssText = "transform: rotateX(90deg);visibility: hidden;"
+//     })
+// })
 
 // currency_title.addEventListener("mouseover", () => {
 //     currency_list.style.cssText = "visibility: visible;transform: rotateX(0deg);"
@@ -304,7 +309,7 @@ currency_item.forEach(e => {
 
 
 
-// ------------ Currency Choose Start ---------
+// ------------ Currency Choose End ---------
 
 
 
