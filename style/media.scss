@@ -97,18 +97,18 @@
 
         .header {
 
-            &__top {
-                flex-direction: column;
-            }
+            // &__top {
+            //     flex-direction: column;
+            // }
 
-            &__top_right {
-                width: 100%;
-                justify-content: space-between;
+            // &__top_right {
+            //     width: 100%;
+            //     justify-content: space-between;
 
-                .phone {
-                    font-size: 14px;
-                }
-            }
+            //     .phone {
+            //         font-size: 14px;
+            //     }
+            // }
 
             .decore {
                 bottom: -160px;
@@ -398,6 +398,7 @@
     @media only screen and (max-width: 576px) {
 
         .header {
+            
             &__top {
                 h1 {
                     font-size: 17px;
@@ -405,6 +406,15 @@
                     margin: 10px auto;
                     max-width: 280px;
                 }
+            }
+
+            &__top {
+                flex-direction: column;
+            }
+
+            &__top_right {
+                width: 100%;
+                justify-content: flex-end;
             }
         }
 
