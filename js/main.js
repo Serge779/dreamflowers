@@ -292,9 +292,17 @@ currency_item.forEach(e => {
     })
 })
 
-currency_title.addEventListener("mouseover", () => {
-    currency_list.style.cssText = "visibility: visible;transform: rotateX(0deg);"
-})
+// currency_title.addEventListener("mouseover", () => {
+//     currency_list.style.cssText = "visibility: visible;transform: rotateX(0deg);"
+//     console.log("mouse over")
+// })
+
+// currency_title.addEventListener("mouseout", () => {
+//     currency_list.style.cssText = "visibility: hiden;transform: rotateX(90deg);"
+//     console.log("mouse out")
+// })
+
+
 
 // ------------ Currency Choose Start ---------
 
@@ -481,6 +489,32 @@ OPEN_LIST(state__item, state__title, state__wrapper, state__input);
 
 // ---------- Clock and State End -----------
 
+
+// ----------- Description Start ------------
+
+let sel_product__description = document.querySelector(".sel_product__description");
+let plus_two = document.querySelector(".plus__two");
+let description = document.querySelector(".sel_product__description-info");
+
+sel_product__description.addEventListener("click", () => {
+
+    plus_two.classList.toggle("active");
+    description.classList.toggle("active");
+
+})
+
+
+document.addEventListener("click", e => {
+    let des_bul = e.target.classList.contains("sel_product__description")
+    let des_info_bul = e.target.classList.contains("sel_product__description-info")
+    if (!des_bul && !des_info_bul) {
+        plus_two.classList.remove("active");
+        description.classList.remove("active");
+    }
+})
+
+
+// ----------- Description End ------------
 
 
 
