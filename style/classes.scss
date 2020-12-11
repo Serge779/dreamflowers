@@ -223,6 +223,11 @@ button {
     }
 }
 
+.calendar_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .calendar {
     position: relative;
     display: flex;
@@ -234,6 +239,7 @@ button {
         justify-content: center;
         align-items: center;
         position: relative;
+        color: $textColor;
         cursor: pointer;
 
         i {
@@ -253,10 +259,12 @@ button {
     &__value {
         height: 40px;
         width: 105px;
-        text-align: center;
         line-height: 40px;
-        font-size: 14px;
     }
+}
+
+input {
+    user-select: text;
 }
 
 .clock, .state {
@@ -266,8 +274,8 @@ button {
     &__title {
         text-align: center;
         width: 140px;
-        height: 40px;
-        line-height: 40px;
+        height: 31px;
+        line-height: 31px;
         cursor: pointer;
     }
 
@@ -311,6 +319,15 @@ button {
         height: 155px;
     }
 
+}
+
+.clock {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    margin-left: 0;
+    &__title {
+        margin: 0;
+    }
 }
 
 .clock__wrapper.active, .state__wrapper.active {

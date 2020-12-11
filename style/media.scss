@@ -359,8 +359,11 @@
                         &__item {
                             flex-direction: column;
     
-                            p {
+                            > p {
                                 margin-bottom: 5px;
+                            }
+
+                            p {
                                 width: 100%;
                             }
                         }
@@ -527,6 +530,24 @@
                 }
             }
 
+            .payable {
+                &__box {
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+        .calendar__value {
+            font-size: 15px;
+        }
+
+        .calendar {
+            &__icon {
+                i {
+                    font-size: 35px;
+                }
+            }
         }
 
     }
@@ -560,7 +581,9 @@
                     font-size: 12px;
                 }
             }
+            
         }
+
     }
 
 }

@@ -286,6 +286,15 @@ button {
      object-fit: cover;
 }
 
+.calendar_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .calendar {
   position: relative;
   display: -webkit-box;
@@ -310,6 +319,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  color: #153d4d;
   cursor: pointer;
 }
 
@@ -329,9 +339,14 @@ button {
 .calendar__value {
   height: 40px;
   width: 105px;
-  text-align: center;
   line-height: 40px;
-  font-size: 14px;
+}
+
+input {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 .clock, .state {
@@ -342,8 +357,8 @@ button {
 .clock__title, .state__title {
   text-align: center;
   width: 140px;
-  height: 40px;
-  line-height: 40px;
+  height: 31px;
+  line-height: 31px;
   cursor: pointer;
 }
 
@@ -386,6 +401,16 @@ button {
 .clock__container, .state__container {
   width: 140px;
   height: 155px;
+}
+
+.clock {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  margin-left: 0;
+}
+
+.clock__title {
+  margin: 0;
 }
 
 .clock__wrapper.active, .state__wrapper.active {

@@ -802,7 +802,8 @@ main {
         align-items: center;
         margin-top: 30px;
         margin-bottom: 100px;
-        background: url(../images/banner.jpg);
+        // background: url(../images/banner.jpg);
+        background: url(../Assets/images/fixed/banner.jpg);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -1344,6 +1345,34 @@ main {
 
         }
 
+    }
+
+    .payable {
+        display: flex;
+        justify-content: flex-end;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            padding: 5px 0 5px 10px;
+            border-bottom: 1px solid $orange;
+            margin-bottom: 20px;
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
 }
