@@ -1809,10 +1809,10 @@ main .cart_order .order .customer__item p, main .cart_order .order .recipient__i
 main .cart_order .order .customer__item input, main .cart_order .order .recipient__item input {
   padding: 7px;
   outline: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
